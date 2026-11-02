@@ -1,5 +1,10 @@
 # ATAG KSK8178ND refrigerator (feature code bb0287z0001j, "Asko Cooler Icon Led")
 # Fridge-only model: no freezer, ice maker, wine zones or variable temperature room.
+# ConnectLife returns no energy statistics for this model: the daily curve and the
+# hourly power are 0.0 every day while the fridge runs.
+statistics:
+  source: energy_consumption_curve
+  daily_energy_kwh: false
 
 properties:
   # Range reported by refrigerator_min_temperature / refrigerator_max_temperature
